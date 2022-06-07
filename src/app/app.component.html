@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<h4>Reactive Forms With Two Way binding</h4>
+<form [formGroup]="contactform" (ngSubmit)="onSubmit(contactform)">
+  <p>
+    <label>Name:</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      formControlName="name"
+      [(ngModel)]="name"
+    />
+  </p>
+  <p>
+    <input type="submit" id="submit" />
+  </p>
+</form>
